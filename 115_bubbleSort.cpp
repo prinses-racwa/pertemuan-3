@@ -2,10 +2,10 @@
 #include <string>
 using namespace std;
 
-int arr[20]; // Deklarasi variabe global array a dengan ukuran 20
-int n; // Deklarasi variabel global n untuk menyimpan banyaknya elemen
+int arr[20];
+int n;
 
-void input() { // procedur untuk input
+void input() {
     while (true) {
         cout << "Masukkan banyaknya elemen pada array :"
         cin >> n;
@@ -48,4 +48,24 @@ void bubbleSortArray() {
         cout << endl;
 
     } while (pass <= n - 1);
+}
+
+
+void display() {
+    cout << endl;
+    cout << "==========" << endl;
+    cout << "Element Array yang telah tersusun" << endl;
+    cout << "==========" << endl;
+    cout << endl;
+    for (int j = 0; j < n; j++) {
+        cout << arr[j];
+        if (j < n - 1) {
+            cout << " --> ";
+        }
+    }
+    cout << endl;
+    cout << endl;
+    cout << "Jumlah pass = " << n - 1 << endl;
+    cout << endl;
+    cout << endl;
 }
